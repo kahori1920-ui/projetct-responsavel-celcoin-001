@@ -22,6 +22,16 @@ Reaproveitar a home exportada da Celcoin (HTML/Elementor via SingleFile) como p�
 - `home.html` duplicado removido; título e favicon da aba agora são os do arquivo original
 - Verificado: aba mostra título original; página renderiza idêntica ao arquivo; assets 200
 
+## Atualização (26/08/2026, 20:35)
+- 3 novas páginas de login criadas a partir dos exports enviados pelo usuário:
+  - `/cel_bricks.html` — login Workspace (E-mail/Senha, Primeiro acesso)
+  - `/cel_credit.html` — login Conta Escrow (Usuário/Senha); 1 imagem externa re-hospedada
+  - `/gateway.html` — login cel_payments/Gateway (E-mail/Senha, reCAPTCHA visual)
+- Cartões do modal Entrar ligados às páginas via âncoras envolvendo os cards (display:contents, sem JS)
+- Formulários são visuais (sem backend de autenticação)
+- Verificado: clique no cartão cel_bricks navega para a página; as 3 páginas renderizam corretamente
+- Observação: logo da página escrow aparece levemente cortado (veio assim do export)
+
 ## Atualização (26/08/2026, 20:19)
 - Home substituída pelo novo export (v3), que veio com o modal "Entrar" capturado aberto (seletor de painéis: cel_bricks, cel_credit escrow, Gateway de Pagamentos + links Fale com um especialista / Cadastre-se)
 - Mesmo pipeline aplicado: 31 imagens locais, zero links externos, marquee CSS, setas de dropdown ocultas
