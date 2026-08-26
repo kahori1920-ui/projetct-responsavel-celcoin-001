@@ -22,6 +22,10 @@ Reaproveitar a home exportada da Celcoin (HTML/Elementor via SingleFile) como p�
 - `home.html` duplicado removido; título e favicon da aba agora são os do arquivo original
 - Verificado: aba mostra título original; página renderiza idêntica ao arquivo; assets 200
 
+## Atualização (26/08/2026, 20:39)
+- Bug corrigido: página inicial travada sem rolar. Causa: o export v3 veio com trava de scroll do modal aberto na tag `<html>` (overflow-y:clip + touch-action:none + classe bdt-modal-page). Removida a trava; modal continua abrindo/fechando normalmente
+- Verificado no navegador: scrollY 0→3000 após rolagem e modal abre com Entrar
+
 ## Atualização (26/08/2026, 20:35)
 - 3 novas páginas de login criadas a partir dos exports enviados pelo usuário:
   - `/cel_bricks.html` — login Workspace (E-mail/Senha, Primeiro acesso)
