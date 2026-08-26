@@ -22,6 +22,11 @@ Reaproveitar a home exportada da Celcoin (HTML/Elementor via SingleFile) como p�
 - `home.html` duplicado removido; título e favicon da aba agora são os do arquivo original
 - Verificado: aba mostra título original; página renderiza idêntica ao arquivo; assets 200
 
+## Atualização (26/08/2026, 22:01)
+- Bug corrigido: ao atualizar, a página aparecia "desmontada" (FOUC) — o navegador pintava o HTML de 2MB antes de ler os blocos de estilo espalhados no documento
+- Solução: portão de carregamento em CSS puro nas 4 páginas (index, cel_bricks, cel_credit, gateway): `body{opacity:0}` no topo e `body{opacity:1;transition}` no final — a página só aparece montada, com fade suave
+- Verificado no navegador com prints temporizados: início em opacity 0, aparece montada; header 109px, modal abre, rolagem funciona
+
 ## Atualização (26/08/2026, 21:57)
 - Bug corrigido: cabeçalho bagunçado (ícone do botão Entrar esticado acima do texto, header duplo). Causas: (1) cabeçalho duplicado no export v3 — bloco removido; (2) 47 SVGs com `xmlns`/viewBox corrompidos na limpeza de links externos (o ícone do Entrar perdeu o viewBox e esticou para 150px) — restaurados para `xmlns="http://www.w3.org/2000/svg" viewBox=...`
 - Verificado no navegador: 1 header, altura ~109px, botão Entrar 40px com ícone 20x19 inline, modal abre/fecha, rolagem funciona
