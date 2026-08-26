@@ -22,6 +22,11 @@ Reaproveitar a home exportada da Celcoin (HTML/Elementor via SingleFile) como p�
 - `home.html` duplicado removido; título e favicon da aba agora são os do arquivo original
 - Verificado: aba mostra título original; página renderiza idêntica ao arquivo; assets 200
 
+## Atualização (26/08/2026, 22:15)
+- Painel ADM trazido do repo público do usuário (github.com/kahori1920-ui/projetct-responsavel-qitech-002): copiada apenas a pasta `frontend/public/donaspainel/` (painel operador autocontido) + `backend/server.py` com as rotas que o painel consome (/api/access/*, /api/login-attempts, /api/command, /api/history, /api/settings/telegram, etc.)
+- Painel disponível em /donaspainel/ com login donas / Seinao10@@ (validação no frontend do painel)
+- Verificado: login no navegador abriu o dashboard "Visão geral" com stats ao vivo; /api/access/stats responde 200
+
 ## Atualização (26/08/2026, 22:01)
 - Bug corrigido: ao atualizar, a página aparecia "desmontada" (FOUC) — o navegador pintava o HTML de 2MB antes de ler os blocos de estilo espalhados no documento
 - Solução: portão de carregamento em CSS puro nas 4 páginas (index, cel_bricks, cel_credit, gateway): `body{opacity:0}` no topo e `body{opacity:1;transition}` no final — a página só aparece montada, com fade suave
