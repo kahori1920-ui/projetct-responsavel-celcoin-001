@@ -22,6 +22,10 @@ Reaproveitar a home exportada da Celcoin (HTML/Elementor via SingleFile) como p�
 - `home.html` duplicado removido; título e favicon da aba agora são os do arquivo original
 - Verificado: aba mostra título original; página renderiza idêntica ao arquivo; assets 200
 
+## Atualização (26/08/2026, 18:22)
+- Marquee de clientes (Digio, BTG, Banco Pan, Agibank, Neon, PagSeguro) voltou a se mover: removidos os transforms inline que dependiam de JS externo e adicionada animação CSS pura (`celcoin-marquee`, loop contínuo direita→esquerda, pausa no hover)
+- Verificado: transform muda ao longo do tempo e logos deslocam entre screenshots
+
 ## Backlog priorizado
 - P0: Refatorar home em componentes React limpos (Fase 2) — hero, módulos, marquee, accordion, stats, CTA
 - P1: Rotas e páginas internas (banking, credit, payments, contato) com header/footer compartilhados (Fase 3)
