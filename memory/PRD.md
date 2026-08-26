@@ -22,6 +22,10 @@ Reaproveitar a home exportada da Celcoin (HTML/Elementor via SingleFile) como p�
 - `home.html` duplicado removido; título e favicon da aba agora são os do arquivo original
 - Verificado: aba mostra título original; página renderiza idêntica ao arquivo; assets 200
 
+## Atualização (26/08/2026, 21:57)
+- Bug corrigido: cabeçalho bagunçado (ícone do botão Entrar esticado acima do texto, header duplo). Causas: (1) cabeçalho duplicado no export v3 — bloco removido; (2) 47 SVGs com `xmlns`/viewBox corrompidos na limpeza de links externos (o ícone do Entrar perdeu o viewBox e esticou para 150px) — restaurados para `xmlns="http://www.w3.org/2000/svg" viewBox=...`
+- Verificado no navegador: 1 header, altura ~109px, botão Entrar 40px com ícone 20x19 inline, modal abre/fecha, rolagem funciona
+
 ## Atualização (26/08/2026, 20:39)
 - Bug corrigido: página inicial travada sem rolar. Causa: o export v3 veio com trava de scroll do modal aberto na tag `<html>` (overflow-y:clip + touch-action:none + classe bdt-modal-page). Removida a trava; modal continua abrindo/fechando normalmente
 - Verificado no navegador: scrollY 0→3000 após rolagem e modal abre com Entrar
