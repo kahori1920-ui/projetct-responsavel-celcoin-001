@@ -22,6 +22,12 @@ Reaproveitar a home exportada da Celcoin (HTML/Elementor via SingleFile) como p�
 - `home.html` duplicado removido; título e favicon da aba agora são os do arquivo original
 - Verificado: aba mostra título original; página renderiza idêntica ao arquivo; assets 200
 
+## Atualização (26/08/2026, 20:19)
+- Home substituída pelo novo export (v3), que veio com o modal "Entrar" capturado aberto (seletor de painéis: cel_bricks, cel_credit escrow, Gateway de Pagamentos + links Fale com um especialista / Cadastre-se)
+- Mesmo pipeline aplicado: 31 imagens locais, zero links externos, marquee CSS, setas de dropdown ocultas
+- Modal ligado via CSS puro (`:target`): botão Entrar (href=#bdt-modal-4269d6e) abre; botão X (href="#fechar") fecha; oculto por padrão
+- Verificado no navegador: modal oculto no load, abre ao clicar Entrar (display:block), fecha no X; marquee continua animando
+
 ## Atualização (26/08/2026, 20:12)
 - Usuário decidiu: menu sem mega menu — só os títulos, sem ação no hover
 - Novo export (celcoin_v2.htm) analisado: painéis dos dropdowns continuam vazios no HTML (conteúdo montado via JS no site original); descartado
